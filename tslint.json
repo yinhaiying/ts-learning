@@ -1,0 +1,12 @@
+{
+    "defaultSeverity": "error",
+    "extends": [
+        "tslint:recommended"
+    ],
+    "jsRules": {},
+    "rules": {
+      "interface-name":[false,"neverprefix"], //  接口不需要以I开头
+      "object-literal-key-quotes":false
+    },
+    "rulesDirectory": []
+}
