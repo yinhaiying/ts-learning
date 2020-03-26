@@ -20,16 +20,16 @@ function getInfo1({name,age}:{name:string,age:number}):string{
 
 
 
-interface PersonInterface{
-  name:string;
-  age:number
-}
+// interface PersonInterface{
+//   name:string;
+//   age:number
+// }
 
-function getInfo2(person:PersonInterface):string{
-  return `姓名：${person.name},年龄：${person.age}`;
-};
+// function getInfo2(person:PersonInterface):string{
+//   return `姓名：${person.name},年龄：${person.age}`;
+// };
 
-getInfo2({name:'hello',age:24});
+// getInfo2({name:'hello',age:24});
 
 
 // 多余的属性处理

@@ -104,4 +104,4 @@ const getProp2 = <T,U extends keyof T>(obj:T,prop:U) => {
     return obj[prop];
 };
 console.log(getProp2(obj,'a'));  // a
-console.log(getProp2(obj,'c'));  // Argument of type '"c"' is not assignable to parameter of type '"a" | "b"'
+// console.log(getProp2(obj,'c'));  // Argument of type '"c"' is not assignable to parameter of type '"a" | "b"'
