@@ -54,7 +54,7 @@ let person = {
   age:24,
   sex:'男'
 };
-getInfo2(person);
+// getInfo2(person);
 
 
 // 接口的继承
