@@ -106,22 +106,22 @@
 
 // 类的类型兼容性
 
-class AnimalClass {
-  public static age:number;
-  constructor(public name:string){};
-}
-class PeopleClass {
-  public static age:string;
-  constructor(public name:string){};
-}
-class FoodClass {
-  public static age:number;
-  constructor(public name:number){};
-}
+// class AnimalClass {
+//   public static age:number;
+//   constructor(public name:string){};
+// }
+// class PeopleClass {
+//   public static age:string;
+//   constructor(public name:string){};
+// }
+// class FoodClass {
+//   public static age:number;
+//   constructor(public name:number){};
+// }
 
-// 将类作为类型使用时，实际上是将类的实例来作为类型使用。
-let animals:AnimalClass;
-let peop:PeopleClass;
-let food:FoodClass;
+// // 将类作为类型使用时，实际上是将类的实例来作为类型使用。
+// let animals:AnimalClass;
+// let peop:PeopleClass;
+// let food:FoodClass;
 
-animals = peop;
+// animals = peop;
