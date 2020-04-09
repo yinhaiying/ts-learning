@@ -20,6 +20,11 @@
 import Vue from "vue";
 import Component from "vue-class-component";
 import TodoItem from "../components/todo-item.vue";
+import { Mutation, State } from 'vuex-class';
+interface IList {
+  text: string;
+  complete: boolean;
+}
 @Component({
   name: "Todo",
   components: {
@@ -27,31 +32,24 @@ import TodoItem from "../components/todo-item.vue";
   },
 })
 export default class Todo extends Vue {
+  @State("todoList") public list!: IList[];
+  // 表示调用state中的mutation中的updateTodoList方法。并且在当前类中命名为updateList
+  @Mutation("updateTodoList") public updateList;
+
   public editIndex: number = -1;
-  public list = [
-    {
-      text: "typescript",
-      complete: false,
-    },
-    {
-      text: "flutter",
-      complete: false,
-    },
-  ];
   public handleEdit(index: number) {
     this.editIndex = index;
   }
   public handleSave(obj: {index: number, content: string}) {
-    this.list[obj.index].text = obj.content;
+    //
+    this.updateList({index: obj.index, content: obj.content})
+    // this.list[obj.index].text =  obj.content;
     this.editIndex = -1;
   }
   public handleCancel() {
     this.editIndex = -1;
   }
   public handleComplete(index: number) {
-    console.log(111);
-    console.log(index);
-    console.log(this.list[index])
     this.list[index].complete = true;
   }
 }

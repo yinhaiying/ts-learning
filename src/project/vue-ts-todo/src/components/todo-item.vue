@@ -1,8 +1,7 @@
 <template>
-  <li @click = "complete">
-
+  <li>
     <div v-if = "index !== editIndex" class = "item">
-      <span :class = "[item.complete ? 'complete':'']">{{item.text }}</span>
+      <span @click = "complete" :class = "[item.complete ? 'complete':'']">{{item.text }}</span>
       <a-icon class = "edit-icon" type = "edit" @click.native = "edit"></a-icon>
     </div>
     <div v-else class = "item">
